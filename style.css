@@ -70,4 +70,44 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}.elephant-info {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.elephant-info h1 {
+    text-align: center;
+    color: #333;
+}
+
+.elephant-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.elephant-img {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+}
+
+.elephant-text {
+    padding: 20px;
+}
+
+.elephant-text h2 {
+    margin-top: 0;
+    color: #555;
+}
+
+.elephant-text p {
+    color: #666;
+    line-height: 1.6;
 }
