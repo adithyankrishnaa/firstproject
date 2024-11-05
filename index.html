@@ -3,30 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BCA Student Portfolio</title>
+  <title>Fashion House - Clothing Store</title>
   <style>
+    /* Reset CSS */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
+    /* Body and General Styles */
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       line-height: 1.6;
       background-color: #f4f4f4;
       color: #333;
     }
 
+    /* Navbar */
     nav {
       background-color: #333;
-      color: white;
       padding: 10px 0;
       text-align: center;
     }
 
     nav ul {
       list-style: none;
+      padding: 0;
     }
 
     nav ul li {
@@ -40,78 +43,140 @@
       font-size: 18px;
     }
 
+    /* Header Section */
     header {
       background-color: #5c6bc0;
       color: white;
-      padding: 50px 0;
       text-align: center;
+      padding: 100px 20px;
     }
 
     header h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
+      margin-bottom: 10px;
     }
 
     header p {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
     }
 
-    .card {
-      margin: 30px 0;
-      background-color: white;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .card-content {
-      display: flex;
-      align-items: center;
-    }
-
-    .profile-img {
-      border-radius: 50%;
-      margin-right: 20px;
-    }
-
-    .about-text h3 {
-      font-size: 1.8rem;
-      color: #333;
-    }
-
-    .skills-container,
-    .projects-container {
+    /* Featured Products Section */
+    .featured-products {
       display: flex;
       justify-content: space-around;
+      margin: 40px 20px;
       flex-wrap: wrap;
     }
 
-    .skill-card,
-    .project-card {
-      background-color: #fff;
-      margin: 10px;
-      padding: 20px;
-      width: 250px;
+    .product-card {
+      background-color: white;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 10px;
+      width: 280px;
+      text-align: center;
+      padding: 20px;
+      border-radius: 8px;
+      transition: transform 0.3s ease-in-out;
     }
 
-    .skill-card h3,
-    .project-card h3 {
-      color: #5c6bc0;
+    .product-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
     }
 
-    ul {
-      list-style: none;
+    .product-card h3 {
+      margin: 15px 0;
+      color: #333;
     }
 
-    ul li {
-      margin: 10px 0;
+    .product-card p {
+      color: #777;
     }
 
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+
+    /* Gallery Section */
+    .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 40px 20px;
+    }
+
+    .gallery img {
+      width: 30%;
+      margin: 10px;
+      border-radius: 8px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
+
+    /* About Section */
+    .about {
+      text-align: center;
+      background-color: #fff;
+      padding: 60px 20px;
+      margin: 40px 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .about h2 {
+      margin-bottom: 20px;
+      font-size: 2.5rem;
+      color: #333;
+    }
+
+    .about p {
+      font-size: 1.2rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* Contact Section */
+    .contact {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .contact h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .contact p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .contact a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      padding: 10px 20px;
+      background-color: #5c6bc0;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact a:hover {
+      background-color: #4f5b8b;
+    }
+
+    /* Footer */
     footer {
       background-color: #333;
       color: white;
       text-align: center;
       padding: 10px 0;
-      margin-top: 50px;
     }
   </style>
 </head>
@@ -121,81 +186,61 @@
   <nav>
     <ul>
       <li><a href="#">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#gallery">Gallery</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Header -->
+  <!-- Header Section -->
   <header>
-    <div class="container">
-      <h1>BCA Student Portfolio</h1>
-      <p>Welcome to my personal portfolio. I'm a passionate learner and budding developer.</p>
-    </div>
+    <h1>Fashion House</h1>
+    <p>Your one-stop destination for stylish clothing</p>
   </header>
 
-  <!-- About Me Section -->
-  <section id="about" class="card">
-    <h2>About Me</h2>
-    <div class="card-content">
-      <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-img">
-      <div class="about-text">
-        <h3>John Doe</h3>
-        <p>I'm a Bachelor of Computer Applications (BCA) student with a strong foundation in programming and software development. I am passionate about web development, machine learning, and problem-solving.</p>
-      </div>
+  <!-- About Us Section -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>At Fashion House, we offer the latest trends in clothing. Our goal is to provide high-quality, comfortable, and affordable fashion to our customers. Whether you're looking for casual wear, evening attire, or accessories, we've got you covered.</p>
+  </section>
+
+  <!-- Featured Products Section -->
+  <section id="products" class="featured-products">
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300" alt="Product 1">
+      <h3>Men's Jacket</h3>
+      <p>$50.00</p>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300" alt="Product 2">
+      <h3>Women's Dress</h3>
+      <p>$40.00</p>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300" alt="Product 3">
+      <h3>Unisex T-shirt</h3>
+      <p>$20.00</p>
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-container">
-      <div class="skill-card">
-        <h3>HTML & CSS</h3>
-        <p>Building responsive web pages with HTML and styling them with CSS.</p>
-      </div>
-      <div class="skill-card">
-        <h3>JavaScript</h3>
-        <p>Creating interactive web pages and applications using JavaScript.</p>
-      </div>
-      <div class="skill-card">
-        <h3>Python</h3>
-        <p>Using Python for programming, data analysis, and machine learning projects.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects-container">
-      <div class="project-card">
-        <h3>Personal Website</h3>
-        <p>A simple personal website built using HTML, CSS, and JavaScript to showcase my work and projects.</p>
-      </div>
-      <div class="project-card">
-        <h3>Data Analysis with Python</h3>
-        <p>A data analysis project using Python libraries like Pandas and Matplotlib to analyze and visualize data.</p>
-      </div>
-    </div>
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <img src="https://via.placeholder.com/400" alt="Gallery 1">
+    <img src="https://via.placeholder.com/400" alt="Gallery 2">
+    <img src="https://via.placeholder.com/400" alt="Gallery 3">
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="card">
-    <h2>Contact</h2>
-    <p>If you'd like to get in touch, feel free to reach out through the following:</p>
-    <ul>
-      <li>Email: johndoe@example.com</li>
-      <li>LinkedIn: <a href="#">linkedin.com/in/johndoe</a></li>
-      <li>GitHub: <a href="#">github.com/johndoe</a></li>
-    </ul>
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Have any questions or need assistance? Get in touch with us!</p>
+    <a href="mailto:info@fashionhouse.com">Email Us</a>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2024 John Doe. All Rights Reserved.</p>
+    <p>&copy; 2024 Fashion House. All Rights Reserved.</p>
   </footer>
 
 </body>
